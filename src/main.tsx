@@ -10,20 +10,23 @@ import Blog from './components/Blog';
 import NotFound from './components/NotFound';
 import App from './App';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      { path: '/', element: <Landing /> },
-      { path: '/about', element: <Hero /> },
-      { path: '/contact', element: <Contact /> },
-      { path: '/projects', element: <Projects /> },
-      { path: '/blog', element: <Blog /> },
-      { path: '*', element: <NotFound /> },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <App />,
+      children: [
+        { path: '/', element: <Landing /> },
+        { path: '/about', element: <Hero /> },
+        { path: '/contact', element: <Contact /> },
+        { path: '/projects', element: <Projects /> },
+        { path: '/blog', element: <Blog /> },
+        { path: '*', element: <NotFound /> },
+      ],
+    },
+  ],
+  { basename: import.meta.env.BASE_URL }
+);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

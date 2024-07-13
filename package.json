@@ -2,6 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://oskarisuonpaa.github.io/portfolio-website/",
   "type": "module",
   "scripts": {
     "dev": "vite",
