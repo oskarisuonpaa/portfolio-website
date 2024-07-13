@@ -7,6 +7,7 @@ export default defineConfig({
   define: {
     'process.env': loadEnv('', process.cwd()),
   },
+  base: './',
 });
 
 const env = loadEnv('', process.cwd());
