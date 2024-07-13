@@ -10,23 +10,20 @@ import Blog from './components/Blog';
 import NotFound from './components/NotFound';
 import App from './App';
 
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      element: <App />,
-      children: [
-        { path: '/', element: <Landing /> },
-        { path: '/about', element: <Hero /> },
-        { path: '/contact', element: <Contact /> },
-        { path: '/projects', element: <Projects /> },
-        { path: '/blog', element: <Blog /> },
-        { path: '*', element: <NotFound /> },
-      ],
-    },
-  ],
-  { basename: process.env.PUBLIC_URL }
-);
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      { path: '/', element: <Landing /> },
+      { path: '/about', element: <Hero /> },
+      { path: '/contact', element: <Contact /> },
+      { path: '/projects', element: <Projects /> },
+      { path: '/blog', element: <Blog /> },
+      { path: '*', element: <NotFound /> },
+    ],
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
